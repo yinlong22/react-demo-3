@@ -1,10 +1,10 @@
 import React from 'react';
 
 class App extends React.PureComponent {
-    divRef=undefined;//好习惯，把特殊属性写在前面，声明自己要创动态的divRef
+    divRef = undefined;//好习惯，把特殊属性写在前面，声明自己要创动态的divRef
     constructor(props) {//初始化各类数据，对象和函数
         super(props);
-        this.state = {n: 1, m: 1,array:[1,2,3,4,5,6],width:undefined};
+        this.state = {n: 1, m: 1, array: [1, 2, 3, 4, 5, 6], width: undefined};
         this.divRef = React.createRef()//
     }
 
@@ -44,14 +44,14 @@ class App extends React.PureComponent {
                 <div className="App">
                     m:{this.state.m}
                     {this.state.n % 2 === 0 ?
-                    <div>偶数</div> : <span>奇数</span>}
+                        <div>偶数</div> : <span>奇数</span>}
                     {/*{this.state.n % 2 === 0 && <div>偶数</div>}*/}
                     <button onClick={this.onClick2}>m+1</button>
                     <B name={this.state.n}/>
                     <button onClick={this.onClick}>n+1-1</button>
                 </div>
                 {/*{result} / for循环返回的result*/}
-                {this.state.array.map(n=><div key={n}>{n}</div>)}
+                {this.state.array.map(n => <div key={n}>{n}</div>)}
                 {/*每个数都用div包起来,循环都要写key=自己的对象，不然warning*/}
             </React.Fragment>
         );
