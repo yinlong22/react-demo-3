@@ -1,4 +1,4 @@
-## react组件和生命周期
+## react类组件和生命周期
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
