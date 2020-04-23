@@ -5,7 +5,7 @@ class App extends React.PureComponent {
     constructor(props) {//初始化各类数据，对象和函数
         super(props);
         this.state = {n: 1, m: 1, array: [1, 2, 3, 4, 5, 6], width: undefined};
-        this.divRef = React.createRef()//
+        this.divRef = React.createRef()
     }
 
     onClick = () => {
@@ -39,6 +39,7 @@ class App extends React.PureComponent {
         return (
             // 由于只能有一个根元素，所以为了方便用Fragment来占位。可简写为<>!!!
             <React.Fragment>
+                {/*divRef相当于componentDidMount：首次渲染执行代码*/}
                 <div ref={this.divRef}>hi , 获取的屏宽为{this.state.width}px</div>
                 {/*<div id="xxx">hi , 获取屏宽为:{this.state.width}px</div> /DOM写法获取屏宽 react ↑ ↑*/}
                 <div className="App">
